@@ -1,0 +1,258 @@
+.container {
+  min-height: 100vh;
+  background-color: var(--bg-light);
+}
+
+.header {
+  background: linear-gradient(135deg, var(--primary) 0%, #003d6b 100%);
+  color: white;
+  padding: 40px 24px;
+}
+
+.headerContent {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.headerContent h1 {
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+}
+
+.summaryCards {
+  max-width: 1400px;
+  margin: -40px auto 0;
+  padding: 0 24px 32px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.summaryCard {
+  background: var(--bg-white);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: transform 0.3s ease;
+}
+
+.summaryCard:hover {
+  transform: translateY(-4px);
+}
+
+.cardIcon {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardIcon .material-icons {
+  font-size: 32px;
+}
+
+.summaryCard h3 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.summaryCard p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.toolbar {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px 24px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.searchBar {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--bg-white);
+  padding: 12px 20px;
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+}
+
+.searchBar .material-icons {
+  color: var(--text-secondary);
+}
+
+.searchBar input {
+  flex: 1;
+  border: none;
+  background: none;
+  font-size: 16px;
+  color: var(--text-primary);
+}
+
+.searchBar input::placeholder {
+  color: var(--text-secondary);
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.addButton,
+.bulkUploadButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.addButton {
+  background-color: var(--accent);
+  color: white;
+  box-shadow: var(--shadow-sm);
+}
+
+.addButton:hover {
+  background-color: #F57C00;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.bulkUploadButton {
+  background-color: var(--bg-white);
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.bulkUploadButton:hover {
+  background-color: var(--primary);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.orderList {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.emptyState {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.emptyState .material-icons {
+  font-size: 80px;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+.emptyState h3 {
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.emptyState p {
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 32px 16px;
+  }
+
+  .summaryCards {
+    padding: 0 16px 24px;
+    grid-template-columns: 1fr;
+    margin-top: -20px;
+  }
+
+  .summaryCard {
+    padding: 20px;
+  }
+
+  .cardIcon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .cardIcon .material-icons {
+    font-size: 28px;
+  }
+
+  .summaryCard h3 {
+    font-size: 28px;
+  }
+
+  .toolbar {
+    padding: 0 16px 16px;
+    flex-direction: column;
+  }
+
+  .searchBar {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .addButton,
+  .bulkUploadButton {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .orderList {
+    padding: 0 16px 32px;
+    grid-template-columns: 1fr;
+  }
+
+  .emptyState {
+    padding: 60px 20px;
+  }
+
+  .emptyState .material-icons {
+    font-size: 60px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .orderList {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
